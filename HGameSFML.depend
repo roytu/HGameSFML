@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1347899680 source:/home/thatsnail/Desktop/C++/HGameSFML/main.cpp
+
+1347903712 source:/home/thatsnail/Desktop/C++/HGameSFML/src/HGame.cpp
+	"../include/H.h"
+	"SFML/Graphics.hpp"
+	"LDraw.h"
+	<algorithm>
+	<time.h>
+
+1347653124 /home/thatsnail/Desktop/C++/HGameSFML/include/H.h
+	"HGame.h"
+	"HScreen.h"
+	"HResources.h"
+	"HRoom.h"
+
+1347653124 /home/thatsnail/Desktop/C++/HGameSFML/include/HGame.h
+	<vector>
+	<queue>
+	"Obj.h"
+
+1348462087 /home/thatsnail/Desktop/C++/HGameSFML/include/Obj.h
+	"Spr.h"
+
+1347901914 /home/thatsnail/Desktop/C++/HGameSFML/include/Spr.h
+	<SFML/Graphics.hpp>
+
+1348461391 /home/thatsnail/Desktop/C++/HGameSFML/include/HScreen.h
+	"SFML/Graphics.hpp"
+
+1347899940 /home/thatsnail/Desktop/C++/HGameSFML/include/HResources.h
+	"Room.h"
+
+1347900835 /home/thatsnail/Desktop/C++/HGameSFML/include/Room.h
+	"Obj.h"
+	<vector>
+
+1347653124 /home/thatsnail/Desktop/C++/HGameSFML/include/HRoom.h
+	"Room.h"
+
+1347903058 /home/thatsnail/Desktop/C++/HGameSFML/include/LDraw.h
+	"HScreen.h"
+	"Spr.h"
+
+1347900901 source:/home/thatsnail/Desktop/C++/HGameSFML/src/HResources.cpp
+	"HResources.h"
+	<fstream>
+	<string>
+
+1347656018 source:/home/thatsnail/Desktop/C++/HGameSFML/src/HRoom.cpp
+	"HRoom.h"
+	"HGame.h"
+
+1348461371 source:/home/thatsnail/Desktop/C++/HGameSFML/src/HScreen.cpp
+	"HScreen.h"
+
+1347903402 source:/home/thatsnail/Desktop/C++/HGameSFML/src/LDraw.cpp
+	"LDraw.h"
+
+1348461260 source:/home/thatsnail/Desktop/C++/HGameSFML/src/Obj.cpp
+	"Obj.h"
+	"HGame.h"
+	<vector>
+	<cmath>
+	"LDraw.h"
+
+1347903479 source:/home/thatsnail/Desktop/C++/HGameSFML/src/Room.cpp
+	"Room.h"
+
+1347903501 source:/home/thatsnail/Desktop/C++/HGameSFML/src/Spr.cpp
+	"Spr.h"
+
+1347903573 source:/home/thatsnail/Desktop/C++/HGameSFML/src/main.cpp
+	"HGame.h"
+	<SFML/Graphics.hpp>
+

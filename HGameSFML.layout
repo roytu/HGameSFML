@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="include/H.h" open="0" top="0" tabpos="0">
+		<Cursor position="82" topLine="0" />
+	</File>
+	<File name="include/HResources.h" open="0" top="0" tabpos="0">
+		<Cursor position="13" topLine="0" />
+	</File>
+	<File name="include/HScreen.h" open="0" top="0" tabpos="0">
+		<Cursor position="279" topLine="0" />
+	</File>
+	<File name="include/LDraw.h" open="0" top="0" tabpos="0">
+		<Cursor position="288" topLine="0" />
+	</File>
+	<File name="include/Obj.h" open="1" top="0" tabpos="2">
+		<Cursor position="853" topLine="45" />
+	</File>
+	<File name="include/Room.h" open="0" top="0" tabpos="0">
+		<Cursor position="257" topLine="0" />
+	</File>
+	<File name="src/HGame.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="977" topLine="56" />
+	</File>
+	<File name="src/HResources.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="23" topLine="0" />
+	</File>
+	<File name="src/HScreen.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="247" topLine="0" />
+	</File>
+	<File name="src/LDraw.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="98" topLine="0" />
+	</File>
+	<File name="src/Obj.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="5301" topLine="245" />
+	</File>
+	<File name="src/Room.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="41" topLine="0" />
+	</File>
+	<File name="src/Spr.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="539" topLine="28" />
+	</File>
+	<File name="src/main.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

@@ -160,7 +160,7 @@ bool Obj::isOutsideRoom(Sides side)
 
 Obj* Obj::getCollisionAt(double x, double y, ObjectType type)
 {
-    //TODO rect only for now
+    //TODO ellipse
 	for(unsigned int i=0; i<HGame::getObjectList().size(); i++)
 	{
 	    Obj* o = HGame::getObjectList().at(i);
@@ -170,21 +170,55 @@ Obj* Obj::getCollisionAt(double x, double y, ObjectType type)
 			Spr* spr2 = o->sprite;
 			switch(sprite->hitbox)
 			{
-			case Spr::HITBOX_RECTANGLE:
-				double r1x1 = x + spr1->hitboxX1 - spr1->origX;
-				double r1y1 = y + spr1->hitboxY1 - spr1->origY;
-				double r1x2 = x + spr1->hitboxX2 - spr1->origX;
-				double r1y2 = y + spr1->hitboxY2 - spr1->origY;
+                case Spr::HITBOX_PRECISE:
+                {
+                    double r1x1 = x + spr1->hitboxX1 - spr1->origX;
+                    double r1y1 = y + spr1->hitboxY1 - spr1->origY;
+                    double r1x2 = x + spr1->hitboxX2 - spr1->origX;
+                    double r1y2 = y + spr1->hitboxY2 - spr1->origY;
+                    sf::Rect<double> rect1(r1x1, r1y1, r1x2, r1y2);
 
-				double r2x1 = o->x + spr2->hitboxX1 - spr2->origX;
-				double r2y1 = o->y + spr2->hitboxY1 - spr2->origY;
-				double r2x2 = o->x + spr2->hitboxX2 - spr2->origX;
-				double r2y2 = o->y + spr2->hitboxY2 - spr2->origY;
+                    double r2x1 = o->x + spr2->hitboxX1 - spr2->origX;
+                    double r2y1 = o->y + spr2->hitboxY1 - spr2->origY;
+                    double r2x2 = o->x + spr2->hitboxX2 - spr2->origX;
+                    double r2y2 = o->y + spr2->hitboxY2 - spr2->origY;
+                    sf::Rect<double> rect2(r2x1, r2y1, r2x2, r2y2);
 
-				if(r1x1 <= r2x2 && r1x2 >= r2x1 && r1y1 <= r2y2 && r1y2 >= r2y1)
-				{
-					return o;
-				}
+                    sf::Rect<double> overlap;
+                    if(rect1.Intersects(rect2, &overlap))
+                    {
+                        for(int x=overlap.Left;x<overlap.Right;x++)
+                        {
+                            for(int y=overlap.Top;y<overlap.Bottom;y++)
+                            {
+                                if(spr1->image->GetPixel(x, y).a == 255 && spr2->image->GetPixel(x, y).a == 255)
+                                {
+                                    return o;
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+                case Spr::HITBOX_RECTANGLE:
+                {
+                    double r1x1 = x + spr1->hitboxX1 - spr1->origX;
+                    double r1y1 = y + spr1->hitboxY1 - spr1->origY;
+                    double r1x2 = x + spr1->hitboxX2 - spr1->origX;
+                    double r1y2 = y + spr1->hitboxY2 - spr1->origY;
+                    sf::Rect<double> rect1(r1x1, r1y1, r1x2, r1y2);
+
+                    double r2x1 = o->x + spr2->hitboxX1 - spr2->origX;
+                    double r2y1 = o->y + spr2->hitboxY1 - spr2->origY;
+                    double r2x2 = o->x + spr2->hitboxX2 - spr2->origX;
+                    double r2y2 = o->y + spr2->hitboxY2 - spr2->origY;
+                    sf::Rect<double> rect2(r2x1, r2y1, r2x2, r2y2);
+
+                    if(rect1.Intersects(rect2))
+                    {
+                        return o;
+                    }
+                }
 				break;
 			}
 		}

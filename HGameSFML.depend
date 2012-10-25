@@ -74,3 +74,427 @@
 	"HGame.h"
 	<SFML/Graphics.hpp>
 
+1351135940 source:/home/roytu/Desktop/C++/HGameSFML/src/HGame.cpp
+	"../include/H.h"
+	"SFML/Graphics.hpp"
+	"LDraw.h"
+	<algorithm>
+	<time.h>
+
+1351135940 /home/roytu/Desktop/C++/HGameSFML/include/H.h
+	"HGame.h"
+	"HScreen.h"
+	"HResources.h"
+	"HRoom.h"
+
+1351135940 /home/roytu/Desktop/C++/HGameSFML/include/HGame.h
+	<vector>
+	<queue>
+	"Obj.h"
+
+1351135940 /home/roytu/Desktop/C++/HGameSFML/include/Obj.h
+	"Spr.h"
+
+1351135940 /home/roytu/Desktop/C++/HGameSFML/include/Spr.h
+	<SFML/Graphics.hpp>
+
+1351135940 /home/roytu/Desktop/C++/HGameSFML/include/HScreen.h
+	"SFML/Graphics.hpp"
+
+1351135940 /home/roytu/Desktop/C++/HGameSFML/include/HResources.h
+	"Room.h"
+
+1351135940 /home/roytu/Desktop/C++/HGameSFML/include/Room.h
+	"Obj.h"
+	<vector>
+
+1351135940 /home/roytu/Desktop/C++/HGameSFML/include/HRoom.h
+	"Room.h"
+
+1351135940 source:/home/roytu/Desktop/C++/HGameSFML/src/HResources.cpp
+	"HResources.h"
+	<fstream>
+	<string>
+
+1351135940 source:/home/roytu/Desktop/C++/HGameSFML/src/HRoom.cpp
+	"HRoom.h"
+	"HGame.h"
+
+1351135940 source:/home/roytu/Desktop/C++/HGameSFML/src/HScreen.cpp
+	"HScreen.h"
+
+1351135940 source:/home/roytu/Desktop/C++/HGameSFML/src/LDraw.cpp
+	"LDraw.h"
+
+1351135940 source:/home/roytu/Desktop/C++/HGameSFML/src/Obj.cpp
+	"Obj.h"
+	"HGame.h"
+	<vector>
+	<cmath>
+	"LDraw.h"
+
+1351135940 source:/home/roytu/Desktop/C++/HGameSFML/src/Room.cpp
+	"Room.h"
+
+1351135940 source:/home/roytu/Desktop/C++/HGameSFML/src/Spr.cpp
+	"Spr.h"
+
+1351135940 source:/home/roytu/Desktop/C++/HGameSFML/src/main.cpp
+	"HGame.h"
+	<SFML/Graphics.hpp>
+
+1351135940 /home/roytu/Desktop/C++/HGameSFML/include/LDraw.h
+	"HScreen.h"
+	"Spr.h"
+
+1318999588 /usr/include/SFML/Graphics.hpp
+	<SFML/Window.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Font.hpp>
+	<SFML/Graphics/Glyph.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/PostFX.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/String.hpp>
+	<SFML/Graphics/View.hpp>
+
+1318999588 /usr/include/SFML/Window.hpp
+	<SFML/System.hpp>
+	<SFML/Window/Context.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Window/Input.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/Window.hpp>
+	<SFML/Window/WindowListener.hpp>
+	<SFML/Window/WindowStyle.hpp>
+	<SFML/Window/OpenGL.hpp>
+
+1318999588 /usr/include/SFML/System.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Lock.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/Randomizer.hpp>
+	<SFML/System/Sleep.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Unicode.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Vector3.hpp>
+
+1318999588 /usr/include/SFML/Config.hpp
+	<climits>
+
+1318999588 /usr/include/SFML/System/Clock.hpp
+	<SFML/Config.hpp>
+
+1318999588 /usr/include/SFML/System/Lock.hpp
+	<SFML/System/NonCopyable.hpp>
+
+1318999588 /usr/include/SFML/System/NonCopyable.hpp
+	<SFML/Config.hpp>
+
+1318999588 /usr/include/SFML/System/Mutex.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Win32/Mutex.hpp>
+	<SFML/System/Unix/Mutex.hpp>
+
+1318999588 /usr/include/SFML/System/Win32/Mutex.hpp
+	<SFML/System/NonCopyable.hpp>
+	<windows.h>
+
+1318999588 /usr/include/SFML/System/Unix/Mutex.hpp
+	<SFML/System/NonCopyable.hpp>
+	<pthread.h>
+
+1349469327 /usr/include/pthread.h
+	<features.h>
+	<endian.h>
+	<sched.h>
+	<time.h>
+	<bits/pthreadtypes.h>
+	<bits/setjmp.h>
+	<bits/wordsize.h>
+
+1349469282 /usr/include/features.h
+	<bits/predefs.h>
+	<sys/cdefs.h>
+	<gnu/stubs.h>
+
+1349469309 /usr/include/endian.h
+	<features.h>
+	<bits/endian.h>
+	<bits/byteswap.h>
+
+1349469314 /usr/include/sched.h
+	<features.h>
+	<bits/types.h>
+	<stddef.h>
+	<time.h>
+	<bits/sched.h>
+
+1349469312 /usr/include/time.h
+	<features.h>
+	<stddef.h>
+	<bits/time.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<xlocale.h>
+
+1349469283 /usr/include/xlocale.h
+
+1318999588 /usr/include/SFML/System/Randomizer.hpp
+	<SFML/Config.hpp>
+
+1318999588 /usr/include/SFML/System/Sleep.hpp
+	<SFML/Config.hpp>
+
+1318999588 /usr/include/SFML/System/Thread.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Win32/Thread.hpp>
+	<SFML/System/Unix/Thread.hpp>
+
+1318999588 /usr/include/SFML/System/Win32/Thread.hpp
+	<SFML/System/NonCopyable.hpp>
+	<windows.h>
+
+1318999588 /usr/include/SFML/System/Unix/Thread.hpp
+	<SFML/System/NonCopyable.hpp>
+	<pthread.h>
+
+1318999588 /usr/include/SFML/System/Unicode.hpp
+	<SFML/Config.hpp>
+	<iterator>
+	<locale>
+	<string>
+	<stdlib.h>
+	<SFML/System/Unicode.inl>
+
+1349469304 /usr/include/stdlib.h
+	<features.h>
+	<stddef.h>
+	<bits/waitflags.h>
+	<bits/waitstatus.h>
+	<xlocale.h>
+	<sys/types.h>
+	<alloca.h>
+	<bits/stdlib.h>
+	<bits/stdlib-ldbl.h>
+
+1349469305 /usr/include/alloca.h
+	<features.h>
+	<stddef.h>
+
+1318999588 /usr/include/SFML/System/Unicode.inl
+
+1318999588 /usr/include/SFML/System/Vector2.hpp
+	<SFML/System/Vector2.inl>
+
+1318999588 /usr/include/SFML/System/Vector2.inl
+
+1318999588 /usr/include/SFML/System/Vector3.hpp
+	<SFML/System/Vector3.inl>
+
+1318999588 /usr/include/SFML/System/Vector3.inl
+
+1318999588 /usr/include/SFML/Window/Context.hpp
+	<SFML/Config.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1318999588 /usr/include/SFML/Window/Event.hpp
+	<SFML/Config.hpp>
+
+1318999588 /usr/include/SFML/Window/Input.hpp
+	<SFML/Config.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Window/WindowListener.hpp>
+
+1318999588 /usr/include/SFML/Window/WindowListener.hpp
+	<SFML/Config.hpp>
+
+1318999588 /usr/include/SFML/Window/VideoMode.hpp
+	<SFML/Config.hpp>
+	<cstdlib>
+
+1318999588 /usr/include/SFML/Window/Window.hpp
+	<SFML/Window/Event.hpp>
+	<SFML/Window/Input.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/Window/WindowListener.hpp>
+	<SFML/Window/WindowSettings.hpp>
+	<SFML/Window/WindowStyle.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<queue>
+	<string>
+
+1318999588 /usr/include/SFML/Window/WindowHandle.hpp
+	<SFML/Config.hpp>
+
+1318999588 /usr/include/SFML/Window/WindowSettings.hpp
+
+1318999588 /usr/include/SFML/Window/WindowStyle.hpp
+
+1318999588 /usr/include/SFML/Window/OpenGL.hpp
+	<SFML/Config.hpp>
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+
+1347320258 /usr/include/GL/gl.h
+	"gl_mangle.h"
+	<stdlib.h>
+	<windows.h>
+	<GL/glext.h>
+
+1347320258 /usr/include/GL/gl_mangle.h
+
+1347320258 /usr/include/GL/glext.h
+	<windows.h>
+	<stddef.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1349469304 /usr/include/inttypes.h
+	<features.h>
+	<stdint.h>
+	<stddef.h>
+
+1349469304 /usr/include/stdint.h
+	<features.h>
+	<bits/wchar.h>
+	<bits/wordsize.h>
+
+1347320255 /usr/include/GL/glu.h
+	"glu_mangle.h"
+	<GL/gl.h>
+
+1347320255 /usr/include/GL/glu_mangle.h
+
+1318999588 /usr/include/SFML/Graphics/Color.hpp
+	<SFML/Config.hpp>
+
+1318999588 /usr/include/SFML/Graphics/Font.hpp
+	<SFML/System/Resource.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/Unicode.hpp>
+	<SFML/Graphics/Glyph.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<map>
+	<string>
+
+1318999588 /usr/include/SFML/System/Resource.hpp
+	<set>
+	<cstddef>
+	<SFML/System/Resource.inl>
+	<SFML/System/ResourcePtr.inl>
+
+1318999588 /usr/include/SFML/System/Resource.inl
+
+1318999588 /usr/include/SFML/System/ResourcePtr.inl
+
+1318999588 /usr/include/SFML/Graphics/Glyph.hpp
+	<SFML/Config.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1318999588 /usr/include/SFML/Graphics/Rect.hpp
+	<algorithm>
+	<SFML/Graphics/Rect.inl>
+
+1318999588 /usr/include/SFML/Graphics/Rect.inl
+
+1318999588 /usr/include/SFML/Graphics/Image.hpp
+	<SFML/System/Resource.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<string>
+	<vector>
+
+1318999588 /usr/include/SFML/Graphics/PostFX.hpp
+	<cstddef>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Image.hpp>
+	<istream>
+	<map>
+	<string>
+
+1318999588 /usr/include/SFML/Graphics/Drawable.hpp
+	<SFML/System/Vector2.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Matrix3.hpp>
+
+1318999588 /usr/include/SFML/Graphics/Matrix3.hpp
+	<SFML/Config.hpp>
+	<SFML/System/Vector2.hpp>
+	<math.h>
+	<SFML/Graphics/Matrix3.inl>
+
+1349469302 /usr/include/math.h
+	<features.h>
+	<bits/huge_val.h>
+	<bits/huge_valf.h>
+	<bits/huge_vall.h>
+	<bits/inf.h>
+	<bits/nan.h>
+	<bits/mathdef.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathinline.h>
+	<bits/math-finite.h>
+
+1318999588 /usr/include/SFML/Graphics/Matrix3.inl
+
+1318999588 /usr/include/SFML/Graphics/RenderWindow.hpp
+	<cstddef>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Window/Window.hpp>
+	<string>
+
+1318999588 /usr/include/SFML/Graphics/RenderTarget.hpp
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/View.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1318999588 /usr/include/SFML/Graphics/View.hpp
+	<SFML/Config.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Matrix3.hpp>
+	<SFML/System/Vector2.hpp>
+
+1318999588 /usr/include/SFML/Graphics/Shape.hpp
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/System/Vector2.hpp>
+	<vector>
+
+1318999588 /usr/include/SFML/Graphics/Sprite.hpp
+	<cstddef>
+	<SFML/System/Resource.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1318999588 /usr/include/SFML/Graphics/String.hpp
+	<cstddef>
+	<SFML/System/Resource.hpp>
+	<SFML/System/Unicode.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Font.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<string>
+

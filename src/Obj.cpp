@@ -17,7 +17,6 @@ Obj::Obj(double x, double y)
 	this->y = y;
 	xstart = x;
 	ystart = y;
-	//creepy
 }
 
 void Obj::init()

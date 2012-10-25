@@ -168,21 +168,12 @@ Obj* Obj::getCollisionAt(double x, double y, ObjectType type)
 		{
 			Spr* spr1 = sprite;
 			Spr* spr2 = o->sprite;
-			switch(sprite->hitbox)
+			switch(sprite->hitboxType)
 			{
                 case Spr::HITBOX_PRECISE:
                 {
-                    double r1x1 = x + spr1->hitboxX1 - spr1->origX;
-                    double r1y1 = y + spr1->hitboxY1 - spr1->origY;
-                    double r1x2 = x + spr1->hitboxX2 - spr1->origX;
-                    double r1y2 = y + spr1->hitboxY2 - spr1->origY;
-                    sf::Rect<double> rect1(r1x1, r1y1, r1x2, r1y2);
-
-                    double r2x1 = o->x + spr2->hitboxX1 - spr2->origX;
-                    double r2y1 = o->y + spr2->hitboxY1 - spr2->origY;
-                    double r2x2 = o->x + spr2->hitboxX2 - spr2->origX;
-                    double r2y2 = o->y + spr2->hitboxY2 - spr2->origY;
-                    sf::Rect<double> rect2(r2x1, r2y1, r2x2, r2y2);
+                    sf::Rect<double> rect1 = spr1->getTransformedHitbox(x, y);
+                    sf::Rect<double> rect2 = spr2->getTransformedHitbox(x, y);
 
                     sf::Rect<double> overlap;
                     if(rect1.Intersects(rect2, &overlap))
@@ -202,17 +193,8 @@ Obj* Obj::getCollisionAt(double x, double y, ObjectType type)
                 break;
                 case Spr::HITBOX_RECTANGLE:
                 {
-                    double r1x1 = x + spr1->hitboxX1 - spr1->origX;
-                    double r1y1 = y + spr1->hitboxY1 - spr1->origY;
-                    double r1x2 = x + spr1->hitboxX2 - spr1->origX;
-                    double r1y2 = y + spr1->hitboxY2 - spr1->origY;
-                    sf::Rect<double> rect1(r1x1, r1y1, r1x2, r1y2);
-
-                    double r2x1 = o->x + spr2->hitboxX1 - spr2->origX;
-                    double r2y1 = o->y + spr2->hitboxY1 - spr2->origY;
-                    double r2x2 = o->x + spr2->hitboxX2 - spr2->origX;
-                    double r2y2 = o->y + spr2->hitboxY2 - spr2->origY;
-                    sf::Rect<double> rect2(r2x1, r2y1, r2x2, r2y2);
+                    sf::Rect<double> rect1 = spr1->getTransformedHitbox(x, y);
+                    sf::Rect<double> rect2 = spr2->getTransformedHitbox(x, y);
 
                     if(rect1.Intersects(rect2))
                     {
@@ -229,11 +211,11 @@ Obj* Obj::getCollisionAt(double x, double y, ObjectType type)
 bool Obj::isObjectAtPoint(double x, double y)
 {
     Spr* spr = sprite;
-    switch(spr->hitbox)
+    switch(spr->hitboxType)
     {
         //TODO support others
         case Spr::HITBOX_RECTANGLE:
-            if(spr->hitboxX1 + this->x <= x && x <= spr->hitboxX2 + this->x && spr->hitboxY1 + this->y <= y && y <= spr->hitboxY2 + this->y)
+            if(spr->getTransformedHitbox(this->x, this->y).Contains(x, y))
             {
                 return true;
             }
@@ -268,11 +250,11 @@ Obj* Obj::getCollisionPoint(double x, double y, ObjectType type)
             if(o->sprite != NULL)
             {
                 Spr* spr = o->sprite;
-                switch(spr->hitbox)
+                switch(spr->hitboxType)
                 {
                     //TODO support others
                     case Spr::HITBOX_RECTANGLE:
-                        if(spr->hitboxX1 + o->x <= x && x <= spr->hitboxX2 + o->x && spr->hitboxY1 + o->y <= y && y <= spr->hitboxY2 + o->y)
+                        if(spr->getTransformedHitbox(o->x, o->y).Contains(x, y))
                         {
                             return o;
                         }

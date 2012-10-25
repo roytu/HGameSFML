@@ -4,6 +4,7 @@
 Spr::Spr(void)
 {
 	imageCount = 1;
+	hitbox = sf::Rect<int>();
 }
 
 
@@ -20,16 +21,13 @@ void Spr::setOriginCenter()
 	}
 }
 
-void Spr::setHitboxFull(HitboxType hitbox)
+void Spr::setHitboxFull(HitboxType hitboxType)
 {
-	this->hitbox = hitbox;
+	this->hitboxType = hitboxType;
 
 	if(image != NULL)
 	{
-		hitboxX1 = 0;
-		hitboxY1 = 0;
-		hitboxX2 = imageWidth;
-		hitboxY2 = imageHeight;
+		hitbox = sf::Rect<int>(0, 0, imageWidth, imageHeight);
 	}
 }
 
@@ -47,10 +45,15 @@ void Spr::setup()
 
 void Spr::setHitbox(int x1, int y1, int x2, int y2, HitboxType type)
 {
-	hitbox = type;
+	hitboxType = type;
+    hitbox = sf::Rect<int>(x1, y1, x2, y2);
+}
 
-	hitboxX1 = x1;
-	hitboxY1 = y1;
-	hitboxX2 = x2;
-	hitboxY2 = y2;
+sf::Rect<double> Spr::getTransformedHitbox(double x, double y)
+{
+    sf::Rect<double> transformedHitbox = sf::Rect<double>(x + hitbox.Left - origX,
+                                                          y + hitbox.Top - origY,
+                                                          x + hitbox.Right - origX,
+                                                          y + hitbox.Bottom - origY);
+    return transformedHitbox;
 }

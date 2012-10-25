@@ -12,17 +12,14 @@ public:
 		HITBOX_ELLIPSE
 	};
 
-	HitboxType hitbox;
+	HitboxType hitboxType;
 
 	sf::Image* image;
 
 	double origX;
 	double origY;
 
-	double hitboxX1;
-	double hitboxY1;
-	double hitboxX2;
-	double hitboxY2;
+	sf::Rect<int> hitbox;
 
 	unsigned int imageCount;
 	int imageWidth;
@@ -34,8 +31,10 @@ public:
 	void setOriginCenter();
 	void setOriginTopLeft();
 
+	sf::Rect<double> getTransformedHitbox(double x, double y);
+
 protected:
-	void setHitbox(int x1, int y1, int x2, int y2, HitboxType type);
-	void setHitboxFull(HitboxType hitbox);
+	void setHitbox(int x1, int y1, int x2, int y2, HitboxType hitboxType);
+	void setHitboxFull(HitboxType hitboxType);
 	void setup();
 };

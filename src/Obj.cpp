@@ -12,11 +12,12 @@ Obj::Obj(void)
 
 Obj::Obj(double x, double y)
 {
+    init();
 	this->x = x;
 	this->y = y;
-	xstart = 0;
-	ystart = 0;
-	init();
+	xstart = x;
+	ystart = y;
+	//creepy
 }
 
 void Obj::init()

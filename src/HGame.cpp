@@ -89,7 +89,8 @@ void HGame::hDraw()
     }
     else
     {
-        LDraw::DrawRect(0, 0, HScreen::SCREEN_WIDTH, HScreen::SCREEN_HEIGHT, HScreen::BACKGROUND_COLOR);
+        const sf::FloatRect viewRect = HScreen::getView().GetRect();
+        LDraw::DrawRect(viewRect.Left, viewRect.Top, viewRect.GetWidth() * 2, viewRect.GetHeight() * 2, HScreen::BACKGROUND_COLOR);
     }
 	for(unsigned int i = 0; i < objectList.size(); i++)
     {

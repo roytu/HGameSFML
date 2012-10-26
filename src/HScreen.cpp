@@ -31,3 +31,8 @@ void HScreen::setView(double centerX, double centerY)
     view.SetCenter(centerX, centerY);
     HScreen::getScreen()->SetView(view);
 }
+
+sf::View HScreen::getView()
+{
+    return view;
+}

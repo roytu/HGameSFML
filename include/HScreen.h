@@ -21,4 +21,5 @@ public:
 	static HScreen* getInstance();
 	static sf::RenderWindow* getScreen();
 	static void setView(double centerX, double centerY);
+	static sf::View getView();
 };

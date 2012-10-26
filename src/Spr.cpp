@@ -16,8 +16,8 @@ void Spr::setOriginCenter()
 {
 	if(image!=NULL)
 	{
-		origX = image->GetWidth() / 2;
-		origY = image->GetHeight() / 2;
+		origX = imageWidth / 2;
+		origY = imageHeight / 2;
 	}
 }
 

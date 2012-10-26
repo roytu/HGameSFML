@@ -314,8 +314,8 @@ bool Obj::isParent(ObjectType parent, ObjectType child)
 
 void Obj::moveContact(double direction, int maxDist, ObjectType objectType)
 {
-    double dx = cos(direction * 2 * M_PI / 180);
-    double dy = -sin(direction * 2 * M_PI / 180);
+    double dx = cos(direction * M_PI / 180);
+    double dy = -sin(direction * M_PI / 180);
     for(int i=0; i<maxDist; i++)
     {
         if(isCollidingAt(x + dx, y + dy, objectType))

@@ -28,6 +28,8 @@ void Obj::init()
                                                  /* TODO parent hierarchy here */
                                                  });
 
+    doesExist = true;
+
 	visible = true;
 
 	imageIndex = 0;

@@ -227,15 +227,9 @@ bool Obj::isObjectAtPoint(double x, double y)
         {
             if(hbox.Contains(x, y))
             {
-                for(int sx = hbox.Left; sx < hbox.Right; sx++)
+                if(spr->image->GetPixel(sx, sy).a > 0)
                 {
-                    for(int sy = hbox.Top; sy < hbox.Bottom; sy++)
-                    {
-                        if(spr->image->GetPixel(sx, sy).a > 0)
-                        {
-                            return true;
-                        }
-                    }
+                    return true;
                 }
             }
             return false;

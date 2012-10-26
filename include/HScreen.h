@@ -6,6 +6,7 @@ class HScreen
 {
 private:
 	static HScreen* instance;
+	static sf::View* view;
 
 	sf::RenderWindow* screen;
 	static const int SCREEN_BPP = 32;
@@ -19,4 +20,5 @@ public:
 
 	static HScreen* getInstance();
 	static sf::RenderWindow* getScreen();
+	static void setView(double centerX, double centerY);
 };

@@ -166,9 +166,11 @@ bool Obj::isOutsideRoom(Sides side)
 	return false;
 }
 
+/*
+* Returns object of collission
+*/
 Obj* Obj::getCollisionAt(double x, double y, ObjectType type)
 {
-    //TODO ellipse
 	for(unsigned int i=0; i<HGame::getObjectList().size(); i++)
 	{
 	    Obj* o = HGame::getObjectList().at(i);
@@ -176,41 +178,24 @@ Obj* Obj::getCollisionAt(double x, double y, ObjectType type)
 		{
 			Spr* spr1 = sprite;
 			Spr* spr2 = o->sprite;
-			switch(sprite->hitboxType)
-			{
-                case Spr::HITBOX_PRECISE:
-                {
-                    sf::Rect<double> rect1 = spr1->getTransformedHitbox(x, y);
-                    sf::Rect<double> rect2 = spr2->getTransformedHitbox(x, y);
 
-                    sf::Rect<double> overlap;
-                    if(rect1.Intersects(rect2, &overlap))
+			sf::Rect<double> rect1 = spr1->getTransformedHitbox(x, y);
+            sf::Rect<double> rect2 = spr2->getTransformedHitbox(o->x, o->y);
+
+            sf::Rect<double> overlap;
+            if(rect1.Intersects(rect2, &overlap))
+            {
+                for(int sx = overlap.Left; sx < overlap.Right; sx++)
+                {
+                    for(int sy = overlap.Top; sy < overlap.Bottom; sy++)
                     {
-                        for(int x=overlap.Left;x<overlap.Right;x++)
+                        if(isObjectAtPoint(sx, sy) && o->isObjectAtPoint(sx, sy))
                         {
-                            for(int y=overlap.Top;y<overlap.Bottom;y++)
-                            {
-                                if(spr1->image->GetPixel(x, y).a == 255 && spr2->image->GetPixel(x, y).a == 255)
-                                {
-                                    return o;
-                                }
-                            }
+                            return o;
                         }
                     }
                 }
-                break;
-                case Spr::HITBOX_RECTANGLE:
-                {
-                    sf::Rect<double> rect1 = spr1->getTransformedHitbox(x, y);
-                    sf::Rect<double> rect2 = spr2->getTransformedHitbox(x, y);
-
-                    if(rect1.Intersects(rect2))
-                    {
-                        return o;
-                    }
-                }
-				break;
-			}
+            }
 		}
 	}
 	return NULL;
@@ -272,16 +257,9 @@ Obj* Obj::getCollisionPoint(double x, double y, ObjectType type)
                 continue;
             if(o->sprite != NULL)
             {
-                Spr* spr = o->sprite;
-                switch(spr->hitboxType)
+                if(o->isObjectAtPoint(x, y))
                 {
-                    //TODO support others
-                    case Spr::HITBOX_RECTANGLE:
-                        if(spr->getTransformedHitbox(o->x, o->y).Contains(x, y))
-                        {
-                            return o;
-                        }
-                    break;
+                    return o;
                 }
             }
         }

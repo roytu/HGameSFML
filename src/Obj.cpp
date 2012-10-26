@@ -219,14 +219,35 @@ Obj* Obj::getCollisionAt(double x, double y, ObjectType type)
 bool Obj::isObjectAtPoint(double x, double y)
 {
     Spr* spr = sprite;
+    sf::Rect hbox = spr->getTransformedHitbox(this->x, this->y);
     switch(spr->hitboxType)
     {
         //TODO support others
+        case Spr::HITBOX_PRECISE:
+        {
+            if(hbox.Contains(x, y))
+            {
+                for(int sx = hbox.Left; sx < hbox.Right; sx++)
+                {
+                    for(int sy = hBox.Top; sy < hbox.Bottom; sy++)
+                    {
+                        if(spr->image->GetPixel().a > 0)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+        break;
         case Spr::HITBOX_RECTANGLE:
-            if(spr->getTransformedHitbox(this->x, this->y).Contains(x, y))
+        {
+            if(hbox.Contains(x, y))
             {
                 return true;
             }
+        }
         break;
     }
 }

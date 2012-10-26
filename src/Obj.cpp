@@ -5,6 +5,8 @@
 
 #include "LDraw.h"
 
+std::map<Obj::ObjectType, Obj::ObjectType> Obj::parentMap;
+
 Obj::Obj(void)
 {
 	init();
@@ -21,6 +23,11 @@ Obj::Obj(double x, double y)
 
 void Obj::init()
 {
+    //TODO setup parent hierarchy here
+    parentMap = std::map<ObjectType, ObjectType>({
+                                                 /* TODO parent hierarchy here */
+                                                 });
+
 	visible = true;
 
 	imageIndex = 0;
@@ -286,4 +293,27 @@ Obj* Obj::getCollisionLine(double x1, double y1, double x2, double y2, ObjectTyp
             return NULL;
         }
     }
+}
+
+Obj::ObjectType Obj::getParent()
+{
+    return parentMap.at(objectType);
+}
+
+Obj::ObjectType Obj::getParent(ObjectType objectType)
+{
+    return parentMap.at(objectType);
+}
+
+bool Obj::isParent(ObjectType parent, ObjectType child)
+{
+    while(child != NULL)
+    {
+        if(child == parent)
+        {
+            return true;
+        }
+        child = getParent(child);
+    }
+    return false;
 }

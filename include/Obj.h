@@ -2,14 +2,14 @@
 
 #include "Spr.h"
 
+#include <map>
+
+class ParentMap;
+
 class Obj
 {
 protected:
 	void init();
-
-	enum ObjectType
-	{
-	};
 
 	enum Sides
 	{
@@ -20,12 +20,18 @@ protected:
 	};
 
 public:
+    enum ObjectType
+	{
+	    TEST
+	};
+
+    static std::map<ObjectType, ObjectType> parentMap;
+
 	bool doesExist;
 
 	bool visible;
 
 	ObjectType objectType;
-	ObjectType parent;
 
 	double imageIndex;
 	double imageSpeed;
@@ -71,4 +77,9 @@ public:
     Obj* getCollisionAt(double x, double y, ObjectType type);
     static Obj* getCollisionPoint(double x, double y, ObjectType type);
 	static Obj* getCollisionLine(double x1, double y1, double x2, double y2, ObjectType type, int steps);
+
+	ObjectType getParent();
+	ObjectType getParent(ObjectType objectType);
+
+	bool isParent(ObjectType parent, ObjectType child);
 };

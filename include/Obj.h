@@ -81,5 +81,7 @@ public:
 	ObjectType getParent();
 	ObjectType getParent(ObjectType objectType);
 
+	void moveContact(double direction, int maxDist, ObjectType objectType);
+
 	bool isParent(ObjectType parent, ObjectType child);
 };

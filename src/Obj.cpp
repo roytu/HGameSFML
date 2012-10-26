@@ -86,7 +86,6 @@ void Obj::onStep()
             }
             onAnimationEnd();
         }
-        if(!doesExist){return;}
     }
 
 	xprev = x;

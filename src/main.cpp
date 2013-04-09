@@ -1,4 +1,5 @@
 #pragma once
+
 #include "HGame.h"
 #include <SFML/Graphics.hpp>
 

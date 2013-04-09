@@ -94,8 +94,8 @@ void Obj::onStep()
 
 	x += hspeed;
 	y += vspeed;
-	hspeed += cos(3.14159265358979323 / 180 * gravityDirection) * gravity;
-	vspeed -= sin(3.14159265358979323 / 180 * gravityDirection) * gravity;
+	hspeed += cos(M_PI / 180 * gravityDirection) * gravity;
+	vspeed -= sin(M_PI / 180 * gravityDirection) * gravity;
 	if(abs(hspeed) <= friction){hspeed = 0;}
 	else{hspeed -= hspeed/abs(hspeed) * friction;}
 	if(abs(vspeed) <= friction){vspeed = 0;}
